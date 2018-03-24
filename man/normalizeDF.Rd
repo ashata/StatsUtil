@@ -4,10 +4,12 @@
 \alias{normalizeDF}
 \title{Normalize all or selected columns of a dataframe}
 \usage{
-normalizeDF(df, columns)
+normalizeDF(df, columnSelector)
 }
 \arguments{
 \item{df}{data frame}
+
+\item{columnSelector}{indexes or range of columns to normalize}
 }
 \description{
 Min-Max normalization for dataframe
