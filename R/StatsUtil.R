@@ -1,3 +1,4 @@
+#Create your own R package: https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 #Create package directory
 #library(devtools)
 #library(roxygen2)
