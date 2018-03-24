@@ -5,7 +5,7 @@
 #process package documentation etc
 #document()
 #github
-install_github('ashata/StatsUtil', host="github.com")
+#install_github('ashata/StatsUtil', host="github.com")
 #Library class for BIA6301 so I don't need to write these functions in each file
 library(e1071)
 
