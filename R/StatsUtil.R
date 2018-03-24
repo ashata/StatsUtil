@@ -20,7 +20,7 @@ library(e1071)
 #' dfToFactors()
 dfToFactors<- function(df){
   col_names <- names(df)
-  df[,col_names]<- lapply(df[,col_names], factor))
+  df[,col_names]<- lapply(df[,col_names], factor)
   return df
 }
 
