@@ -33,8 +33,8 @@ dfToFactors<- function(df){
 #' @keywords factors
 #' @export
 #' @examples
-#' dfToFactors()
-dfToFactors<- function(df, col_names){
+#' listToFactors()
+listToFactors<- function(df, col_names){
   return(lapply(df[,col_names], factor))
 }
 
