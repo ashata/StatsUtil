@@ -1,0 +1,10 @@
+Package: StatsUtil
+Title: Utility function
+Version: 1.0
+Authors@R: person("Asha", "Mehrer", email = "ashamehrer@gmail.com", role = c("aut", "cre"))
+Description: Utility package with commonly used functions from class and other things from internet
+Depends: R (>= 3.4.2)
+License: MIT open source
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
