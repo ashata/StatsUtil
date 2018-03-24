@@ -21,7 +21,7 @@ library(e1071)
 dfToFactors<- function(df){
   col_names <- names(df)
   df[,col_names]<- lapply(df[,col_names], factor)
-  return(data.frame(df))
+  return(as.data.frame(df))
 }
 
 #'Convert a subset of features (names(df)) in a dataframe to factors
