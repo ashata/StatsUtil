@@ -10,12 +10,10 @@ states <- cbind.data.frame(Abbr = state.abb, Name = state.name, Region = state.r
 #' Convert state name or abbr to region, cleans mixed format states
 #'
 #' @param states vector with state name or abbr
-#' @param naLbl if present missing/incorrect values will be assigned this label
 #' @keywords state names or abbreviation to Region
 #' @export
 #' groupStatesToRegions
-groupStatesToRegions <- function(states, naLbl){
-  naLbl <- naLbl
+groupStatesToRegions <- function(states){
   states <- state2abbrV2(states)
   regions <- lapply(states, toRegions)
   return(regions)
@@ -25,15 +23,11 @@ groupStatesToRegions <- function(states, naLbl){
 #library(dplyr)
 
 toRegions <- function(x){
-  region <- naLbl
   if(is.element(x, states$Abbr)){
     filteredState <- states %>% filter(Abbr == x)
     region <- filteredState$Region
   }
-  if(is.na(region)){
-    region <- x
-  }
-  return(region)
+  return(x)
 }
 
 #' Convert state names to abbr, cleans mixed format states

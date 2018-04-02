@@ -4,12 +4,10 @@
 \alias{groupStatesToRegions}
 \title{Convert state name or abbr to region, cleans mixed format states}
 \usage{
-groupStatesToRegions(states, naLbl)
+groupStatesToRegions(states)
 }
 \arguments{
 \item{states}{vector with state name or abbr}
-
-\item{naLbl}{if present missing/incorrect values will be assigned this label}
 }
 \description{
 Convert state name or abbr to region, cleans mixed format states
