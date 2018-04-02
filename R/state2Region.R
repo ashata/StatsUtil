@@ -16,7 +16,7 @@ states <- cbind.data.frame(Abbr = state.abb, Name = state.name, Region = state.r
 #' groupStatesToRegions
 groupStatesToRegions <- function(states, naLbl){
   states <- state2abbrV2(states)
-  regions <- lapply(states, toRegions(naLbl))
+  regions <- lapply(states, toRegions(states, naLbl))
   return(regions)
 }
 
