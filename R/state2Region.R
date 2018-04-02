@@ -25,7 +25,7 @@ groupStatesToRegions <- function(states){
 toRegions <- function(x){
   if(is.element(x, states$Abbr)){
     filteredState <- states %>% filter(Abbr == x)
-    region <- filteredState$Region
+    region <- filteredState$Region[1]
     return(region)
   }
   return(x)
