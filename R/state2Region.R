@@ -26,9 +26,12 @@ toRegions <- function(x){
   if(is.element(x, states$Abbr)){
     filteredState <- states %>% filter(Abbr == x)
     region <- filteredState[1,3]
+    print(region)
     return(region)
   }
-  return(x)
+  else{
+    return(x)
+  }
 }
 
 #' Convert state names to abbr, cleans mixed format states
