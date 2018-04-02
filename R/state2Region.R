@@ -15,15 +15,16 @@ states <- cbind.data.frame(Abbr = state.abb, Name = state.name, Region = state.r
 #' @export
 #' groupStatesToRegions
 groupStatesToRegions <- function(states, naLbl){
+  naLbl <- naLbl
   states <- state2abbrV2(states)
-  regions <- lapply(states, toRegions(states, naLbl))
+  regions <- lapply(states, toRegions)
   return(regions)
 }
 
 #library(tidyverse)
 #library(dplyr)
 
-toRegions <- function(x, naLbl){
+toRegions <- function(x){
   region <- naLbl
   if(is.element(x, states$Abbr)){
     filteredState <- states %>% filter(Abbr == x)
