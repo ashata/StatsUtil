@@ -26,6 +26,7 @@ toRegions <- function(x){
   if(is.element(x, states$Abbr)){
     filteredState <- states %>% filter(Abbr == x)
     region <- filteredState$Region
+    return(region)
   }
   return(x)
 }
