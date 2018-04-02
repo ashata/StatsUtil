@@ -14,8 +14,5 @@ normalizeDF(df, columnSelector)
 \description{
 Min-Max normalization for dataframe
 }
-\examples{
-normalizeDF()
-}
 \keyword{minmax,}
 \keyword{norm}

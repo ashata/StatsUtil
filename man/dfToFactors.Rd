@@ -2,17 +2,16 @@
 % Please edit documentation in R/StatsUtil.R
 \name{dfToFactors}
 \alias{dfToFactors}
-\title{Convert features of a dataframe to factors}
+\title{dfToFactors}
 \usage{
-dfToFactors(df)
+dfToFactors(ds)
 }
 \arguments{
-\item{df}{dataframe with numeric, non-categorical data.}
+\item{ds}{dataframe with numeric, non-categorical data.}
 }
 \description{
 This function allows you to convert all features of a dataframe to factors.
 }
-\examples{
-dfToFactors()
-}
+\keyword{dataframe}
 \keyword{factors}
+\keyword{to}

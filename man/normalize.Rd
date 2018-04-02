@@ -12,8 +12,5 @@ normalize(x)
 \description{
 Min-Max normalization for a column.
 }
-\examples{
-normalize()
-}
 \keyword{minmax,}
 \keyword{norm}

@@ -2,19 +2,18 @@
 % Please edit documentation in R/StatsUtil.R
 \name{listToFactors}
 \alias{listToFactors}
-\title{Convert a subset of features (names(df)) in a dataframe to factors}
+\title{listToFactors}
 \usage{
-listToFactors(df, col_names)
+listToFactors(df, col_names1)
 }
 \arguments{
 \item{df}{dataframe with numeric, non-categorical data.}
 
-\item{col_names}{feature names to convert into factors}
+\item{col_names1}{feature names to convert into factors}
 }
 \description{
 This function allows you to convert a select few features in a dataframe to factors.
 }
-\examples{
-listToFactors()
-}
 \keyword{factors}
+\keyword{to}
+\keyword{vector}
