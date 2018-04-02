@@ -13,8 +13,8 @@ states <- cbind.data.frame(Abbr = state.abb, Name = state.name, Region = state.r
 #' @param naLbl if present missing/incorrect values will be assigned this label
 #' @keywords state names or abbreviation to Region
 #' @export
-#' groupStatesToRegions()
-groupStatesToRegions<- function(states, naLbl){
+#' groupStatesToRegions
+groupStatesToRegions <- function(states, naLbl){
   states <- state2abbrV2(states)
   regions <- lapply(states, toRegions(naLbl))
   return(regions)
@@ -40,8 +40,8 @@ toRegions <- function(x, naLbl){
 #' @param statesList vector with state name or abbr
 #' @keywords state names and abbreviation to abbreviation
 #' @export
-#' state2abbrV2()
-state2abbrV2<- function(statesList){
+#' state2abbrV2
+state2abbrV2 <- function(statesList){
   #Convert full names to abbr if needed
   normalize<- function(x){
     #if already abbr, return abbr
