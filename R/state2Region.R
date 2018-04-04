@@ -13,9 +13,14 @@ states <- cbind.data.frame(Abbr = state.abb, Name = state.name, Region = state.r
 #' @keywords state names or abbreviation to Region
 #' @export
 #' groupStatesToRegions
-groupStatesToRegions <- function(states){
+groupStatesToRegions <- function(states, custom){
   states <- state2abbrV2(states)
-  states <- lapply(states, toRegions)
+  if(custom){
+    states <- lapply(states, toCustomRegions)
+  }
+  else{
+    states <- lapply(states, toRegions)
+  }
   return(unlist(states, use.names=FALSE))
 }
 
@@ -52,4 +57,30 @@ state2abbrV2 <- function(statesList){
   }
   statesList <- lapply(statesList, normalize)
   return(statesList)
+}
+
+northeast.region <- c("CT", "ME", "MA", "NH", "RI", "VT", "NJ", "NY", "PA")
+
+south.region <- c("DE", "FL", "GA", "MD", "NC", "SC", "VA", "DC", "WV", "AL", "KY", "MS", "TN", "AR", "LA", "OK", "TX")
+
+West.region <- c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY", "AK", "CA", "HI", "OR", "WA")
+midwest.region <- c("IL", "IN", "MI", "OH", "WI", "IA", "KS", "MN", "MO", "NE", "ND", "SD")
+regions.list <- c(northeast.region, south.region, West.region, midwest.region)
+
+toCustomRegions <- function(x){
+  if(is.element(x, northeast.region)){
+    return("North East")
+  }
+  else if(is.element(x, south.region)){
+    return("South")
+  }
+  else if(is.element(x, West.region)){
+    return("West")
+  }
+  else if(is.element(x, midwest.region)){
+    return("Midwest")
+  }
+  else{
+    return(x)
+  }
 }

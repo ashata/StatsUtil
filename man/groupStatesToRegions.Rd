@@ -4,7 +4,7 @@
 \alias{groupStatesToRegions}
 \title{Convert state name or abbr to region, cleans mixed format states}
 \usage{
-groupStatesToRegions(states)
+groupStatesToRegions(states, custom)
 }
 \arguments{
 \item{states}{vector with state name or abbr}
