@@ -16,7 +16,7 @@ states <- cbind.data.frame(Abbr = state.abb, Name = state.name, Region = state.r
 groupStatesToRegions <- function(states){
   states <- state2abbrV2(states)
   states <- lapply(states, toRegions)
-  return(states)
+  return(unlist(states, use.names=FALSE))
 }
 
 #library(tidyverse)
